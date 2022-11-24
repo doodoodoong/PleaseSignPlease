@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-app-bar app absolute color="#02343F" elevate-on-scroll dense>
-      <nuxt-link to="/test">
-        <v-btn fab height="45px" width="45px" icon>
+      <nuxt-link to="/">
+        <v-btn fab height="45px" width="45px" icon color="white">
           <v-icon>mdi-home-heart</v-icon>
         </v-btn>
       </nuxt-link>
