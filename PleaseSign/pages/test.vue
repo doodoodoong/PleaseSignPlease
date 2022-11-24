@@ -1,11 +1,11 @@
 <template>
   <div>
-    <p>편리한 회의록 서명</p>
+    <h1 class="text-black">test page</h1>
   </div>
 </template>
-
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'Test',
 }
 </script>
+<style></style>

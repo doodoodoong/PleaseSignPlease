@@ -1,14 +1,31 @@
 <template>
   <v-app>
     <v-app-bar app absolute color="#02343F" elevate-on-scroll dense>
-      <v-btn fab height="45px" width="45px" icon>
-        <v-icon>mdi-home-heart</v-icon>
-      </v-btn>
+      <nuxt-link to="/test">
+        <v-btn fab height="45px" width="45px" icon>
+          <v-icon>mdi-home-heart</v-icon>
+        </v-btn>
+      </nuxt-link>
       <v-tolbar-title class="text-yellow-50">Please Sign Please</v-tolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-information-outline</v-icon>
-      </v-btn>
+      <v-dialog transition="dialog-top-transition" max-width="600">
+        <template #activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-information-outline</v-icon>
+          </v-btn>
+        </template>
+        <template #default="dialog">
+          <v-card>
+            <v-toolbar class="bg-green-700"> How to use </v-toolbar>
+            <v-card-text>
+              <div class="text-xl pa-12">This is how to use</div>
+            </v-card-text>
+            <v-card-actions class="justify-end">
+              <v-btn text @click="dialog.value = false"> I understand </v-btn>
+            </v-card-actions>
+          </v-card>
+        </template>
+      </v-dialog>
     </v-app-bar>
     <v-main>
       <v-container>
